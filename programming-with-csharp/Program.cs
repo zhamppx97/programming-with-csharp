@@ -8,6 +8,9 @@ namespace programming_with_csharp
     {
         static void Main(string[] args)
         {
+            // Listing 1-1 to 1-4
+            // Working with a simple data type
+            #region Starting with a simple data type
             // Listing 1-1 The Product Type
             ArrayList list1_1Product = Listing1_1.GetSampleProducts();
             Console.WriteLine("Listing 1-1 The Product Type");
@@ -34,6 +37,17 @@ namespace programming_with_csharp
                 Console.WriteLine(item);
             }
             Console.WriteLine();
+
+            // Listing 1-4 Named arguments for clear initialization code
+            List<Listing1_4> list1_4Product = Listing1_4.GetSampleProducts();
+            Console.WriteLine("Listing 1-4 Named arguments for clear initialization code");
+            foreach (var item in list1_4Product)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            #endregion
+
 
 
             Console.ReadLine();
