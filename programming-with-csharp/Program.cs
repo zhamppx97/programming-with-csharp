@@ -26,9 +26,16 @@ namespace programming_with_csharp
             }
             Console.WriteLine();
 
-            
-            
-            
+            // Listing 1-3 Automationcally implemented properties and simpler initialization
+            List<Listing1_3> list1_3Product = Listing1_3.GetSampleProducts();
+            Console.WriteLine("Listing 1-3 Automationcally implemented properties and simpler initialization");
+            foreach (var item in list1_3Product)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+
+
             Console.ReadLine();
         }
     }
