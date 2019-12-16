@@ -9,7 +9,6 @@ namespace programming_with_csharp
         static void Main(string[] args)
         {
             // Listing 1-1 to 1-4
-            // Working with a simple data type
             #region Starting with a simple data type
             // Listing 1-1 The Product Type
             ArrayList list1_1Product = Listing1_1.GetSampleProducts();
@@ -48,7 +47,28 @@ namespace programming_with_csharp
             Console.WriteLine();
             #endregion
 
+            // Listing 1-5
+            #region Sorting and filtering
+            // Listing 1-5 Sorting an ArrayList using IComparer (Listing 1-1)
+            ArrayList products1_1 = Listing1_1.GetSampleProducts();
+            products1_1.Sort(new ProductNameComparer1_5());
+            Console.WriteLine("Listing 1-5 Sorting an ArrayList using IComparer (Listing 1-1)");
+            foreach (var item in products1_1)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
 
+            // Listing 1-6 Sorting a List<Product> using IComparer<Product> (Listing 1-2)
+            List<Listing1_2> products1_2 = Listing1_2.GetSampleProducts();
+            products1_2.Sort(new ProductNameComparer1_6());
+            Console.WriteLine("Listing 1-6 Sorting a List<Product> using IComparer<Product> (Listing 1-2)");
+            foreach (var item in products1_2)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            #endregion
 
             Console.ReadLine();
         }
